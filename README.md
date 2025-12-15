@@ -1,11 +1,12 @@
-PHP_Laravel12_Update_User_Profile
+# PHP_Laravel12_Update_User_Profile
+
 ---
 A beginner-friendly Laravel 12 project to update user profile including avatar, phone, city, and password. Users can view and update their information securely with authentication.
 
 Project Overview
 ---
 This project demonstrates:
----
+
 User registration and login using Laravel authentication.
 
 Update user profile including:
@@ -28,7 +29,8 @@ Show success and error messages on update.
 
 Profile link in navbar for logged-in users.
 
-Step‑by‑Step Installation
+# Step‑by‑Step Installation
+
 ---
 Step 1 — Create New Laravel Project
 
