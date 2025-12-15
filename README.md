@@ -565,19 +565,24 @@ Main Page:
 
 Register Page:
 
-<img width="1919" height="963" alt="Screenshot 2025-12-15 113122" src="https://github.com/user-attachments/assets/8b05ea30-00cf-44cc-a262-b8f73f4f50f2" />
+<img width="1914" height="955" alt="Screenshot 2025-12-15 125811" src="https://github.com/user-attachments/assets/28567fc3-91c8-451b-bb0a-0c7a59bbc6d3" />
+
 
 Login Page:
 
-<img width="1908" height="961" alt="Screenshot 2025-12-15 113531" src="https://github.com/user-attachments/assets/7d30308d-998d-4a25-90c5-0e15278f51e5" />
+<img width="1919" height="963" alt="image" src="https://github.com/user-attachments/assets/96fc5410-2e18-4142-8982-cbf9a6ecbc85" />
+
 
 Profile Page:
 
-<img width="1894" height="961" alt="Screenshot 2025-12-15 113437" src="https://github.com/user-attachments/assets/9a449f3b-eb77-430d-b9ab-42a26aa1ab59" />
+<img width="1897" height="964" alt="Screenshot 2025-12-15 130023" src="https://github.com/user-attachments/assets/710a5bf2-9eb9-49f6-b694-c1f347e89092" />
+
 
 after click on save button:
 
-<img width="1918" height="972" alt="Screenshot 2025-12-15 113256" src="https://github.com/user-attachments/assets/f4b78a88-2fcf-46fb-96f2-014d79a0f528" />
+<img width="1910" height="960" alt="Screenshot 2025-12-15 125922" src="https://github.com/user-attachments/assets/47f5b91b-f76e-4c51-85de-b31dbbd480dd" />
+
+
 
 
 
