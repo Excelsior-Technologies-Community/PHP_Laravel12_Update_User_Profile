@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
-
 class ProfileController extends Controller
 {
     public function __construct()
@@ -13,30 +12,29 @@ class ProfileController extends Controller
         $this->middleware('auth');
     }
 
-    // Show profile page
     public function index()
     {
         return view('profile');
     }
 
-    // Update profile
     public function store(Request $request)
     {
         $request->validate([
             'name' => 'required',
             'email' => 'required|email',
+            'username' => 'nullable|unique:users,username,'.auth()->id(),
             'confirm_password' => 'required_with:password|same:password',
-            'avatar' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+            'avatar' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
             'phone' => 'nullable',
             'city' => 'nullable',
+            'bio' => 'nullable',
+            'github' => 'nullable',
+            'linkedin' => 'nullable',
         ]);
 
         $user = auth()->user();
 
-        //  Avatar upload (delete old image first)
         if ($request->hasFile('avatar')) {
-
-            // Delete old avatar if exists
             if ($user->avatar && file_exists(public_path('avatars/'.$user->avatar))) {
                 unlink(public_path('avatars/'.$user->avatar));
             }
@@ -47,13 +45,15 @@ class ProfileController extends Controller
             $user->avatar = $fileName;
         }
 
-        //  Update fields
-        $user->name  = $request->name;
+        $user->name = $request->name;
         $user->email = $request->email;
+        $user->username = $request->username;
         $user->phone = $request->phone;
-        $user->city  = $request->city;
+        $user->city = $request->city;
+        $user->bio = $request->bio;
+        $user->github = $request->github;
+        $user->linkedin = $request->linkedin;
 
-        //  Password update (only if entered)
         if ($request->filled('password')) {
             $user->password = Hash::make($request->password);
         }
@@ -63,7 +63,6 @@ class ProfileController extends Controller
         return redirect('/home')->with('success', 'Profile updated successfully.');
     }
 
-    //  DELETE AVATAR 
     public function deleteAvatar()
     {
         $user = auth()->user();
